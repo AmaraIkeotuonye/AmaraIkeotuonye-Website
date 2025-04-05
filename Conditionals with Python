@@ -1,0 +1,201 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/AmaraIkeotuonye/AmaraIkeotuonye-Website/blob/master/Conditionals%20with%20Python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "kG3bHJeZ8bic",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5f94a0f6-b952-40d3-f5ae-79297324a6a3"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the first customer's most recently purchased item: Pizza\n",
+            "Enter the first customer's total store spending 10\n",
+            "Enter the second customer's most recently purchased item: Pizza\n",
+            "Enter the second customer's total store spending 10\n",
+            "Enter the third customer's most recently purchased item Pizza\n",
+            "Enter the third customer's total store spending: 10\n",
+            "All items have the same name.\n",
+            "All the customers spent the same amount of money.\n"
+          ]
+        }
+      ],
+      "source": [
+        "itemOne = input(\"Enter the first customer's most recently purchased item: \")\n",
+        "spendingOne = float(input(\"Enter the first customer's total store spending \"))\n",
+        "itemTwo = input(\"Enter the second customer's most recently purchased item: \")\n",
+        "spendingTwo = float(input(\"Enter the second customer's total store spending \"))\n",
+        "itemThree = input(\"Enter the third customer's most recently purchased item \")\n",
+        "spendingThree = float(input(\"Enter the third customer's total store spending: \"))\n",
+        "if itemOne == itemTwo and itemOne == itemThree:\n",
+        "    print(\"All items have the same name.\")\n",
+        "elif itemOne == itemTwo or itemOne == itemThree or itemTwo == itemThree:\n",
+        "    print(\"Two items have the same name.\")\n",
+        "else:\n",
+        "    print(\"No items have the same name. \")\n",
+        "if spendingOne == spendingTwo and spendingThree:\n",
+        "    print(\"All the customers spent the same amount of money.\")\n",
+        "elif spendingOne > spendingTwo and spendingOne > spendingThree:\n",
+        "    print(\"The first customer has spent the most money.\")\n",
+        "elif spendingTwo > spendingOne and spendingTwo > spendingThree:\n",
+        "    print(\"The second customer has spent the most money.\")\n",
+        "elif spendingThree > spendingOne and spendingThree > spendingTwo:\n",
+        "    print(\"The third customer has spent the most money.\")\n",
+        "else:\n",
+        "    print(\"Two customers are tied for highest spender.\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "STAGE ONE: CONCEPT CHECK\n",
+        "1. Having trouble with the conditional statements.\n",
+        "2. Feel like it would make sense if the code was:\n",
+        "if spendingOne > spendingTwo > spendingThree: print(\"The first customer has spent the most money.) However, the code isn't working.\n",
+        "3. Tried putting \"and\" between spendingTwo and spendingThree.\n",
+        "4. The code is working but not for the third customer for some reason.\n",
+        "5. Modified the code and figured out how to put two equations on one line.\n",
+        "6. Figured it out.\n",
+        "7. Did the customer spending first because I thought it was easier and allowed me to understand how to code the items portion."
+      ],
+      "metadata": {
+        "id": "KRAiphVtua3_"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "tN7XlLxCOJkL",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "4017193f-aeda-48f8-e0c1-fe1f0cc4ea46"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the customer's purchase total: $700\n",
+            "Is the customer a member? Yes or No: Yes\n",
+            "Discount: 20%\n",
+            "Total Price: $560.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "purchaseTotal = float(input(\"Enter the customer's purchase total: $\"))\n",
+        "memberStatus = input(\"Is the customer a member? Yes or No: \")\n",
+        "if memberStatus == \"Yes\" and purchaseTotal > 0 and purchaseTotal < 100:\n",
+        "    discount = 5\n",
+        "    print(\"Discount: 5%\")\n",
+        "    print(f\"Total Price: ${purchaseTotal*0.95}\")\n",
+        "elif memberStatus == \"Yes\" and purchaseTotal < 200:\n",
+        "    discount = 15\n",
+        "    print(\"Discount: 15%\")\n",
+        "    print(f\"Total Price: ${purchaseTotal*0.85}\")\n",
+        "elif memberStatus == \"Yes\" and purchaseTotal >= 200:\n",
+        "    discount = 20\n",
+        "    print(\"Discount: 20%\")\n",
+        "    print(f\"Total Price: ${purchaseTotal*0.80}\")\n",
+        "else:\n",
+        "    print(\"Discount: 0%\")\n",
+        "    print(f\"Total Price: ${purchaseTotal}\")"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "cp9KAZ1yOKoM"
+      },
+      "source": [
+        "STAGE TWO: APPLY IT TO BUSINESS\n",
+        "\n",
+        "1. The code is refusing to load.\n",
+        "2. No matter what I do, all I seem to be getting is \"15.0\" for my Final Price.\n",
+        "3. I am confused.\n",
+        "4. Received help for classmate.\n",
+        "5. Understood the logic aspect of it. I expected the user to input the discount percentage rather than it automatically showing up as the output.\n",
+        "6. After understanding this, the rest of the code was pretty much the same and easy to follow.\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "parkingDuration = float(input(\"How many hours did you park?: \"))\n",
+        "memberStatus = input(\"Are you a monthly member? Yes or No: \")\n",
+        "if parkingDuration <= 2:\n",
+        "    print(\"Total Amount Owed: $0\")\n",
+        "elif parkingDuration > 2 and memberStatus == \"No\":\n",
+        "    print(f\"Total Amount Owed: ${(parkingDuration-2)*5}\")\n",
+        "elif parkingDuration <= 4 and memberStatus == \"Yes\":\n",
+        "    print(f\"Total Amount Owed: ${0}\")\n",
+        "elif parkingDuration > 4 and memberStatus == \"Yes\":\n",
+        "    print(f\"Total Amount Owed: ${(parkingDuration-2)*2}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "zyYf5pTFuKpE",
+        "outputId": "88e2950b-a757-4daa-b11b-74fea6bdb28c"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "How many hours did you park?: 4.5\n",
+            "Are you a monthly member? Yes or No: No\n",
+            "Total Amount Owed: $12.5\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "STAGE THREE: THE TYPE OF QUESTION YOU MIGHT SEE ON AN EXAM\n",
+        "1. This was lowkey the easiest out of the set of questions.\n",
+        "2. I just mirrored the format of the question above after writing down the key information on a postcard and everything wrote itself pretty smoothly."
+      ],
+      "metadata": {
+        "id": "EmMx0BeXuMo3"
+      }
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
